@@ -1,0 +1,47 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Directorios de build
+.next/
+out/
+dist/
+build/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Cache
+.cache/
+.next/cache/
+
+# Editor configs
+.vscode/
+*.swp
+.idea/
+
+# Archivos de cobertura
+coverage/
+
+# Tipos
+*.tsbuildinfo
+
+# OS metadata
+*.pid
+*.seed
+*.pid.lock
