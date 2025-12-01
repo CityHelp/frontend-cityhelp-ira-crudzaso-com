@@ -103,7 +103,7 @@ Ensure you have the following installed on your system:
 1. **Clone the repository**
 
 ```bash
-git clone [repository-url]
+git clone https://github.com/CityHelp/frontend-cityhelp-ira-crudzaso-com.git
 cd landing-page
 ```
 
@@ -323,5 +323,6 @@ Theme colors are defined using HSL values in CSS variables:
 **Made with ❤️ for a safer Medellín**
 
 [⬆ Back to Top](#cityhelp---smart-road-safety-platform)
+
 
 </div># frontend-cityhelp-ira-crudzaso-com
