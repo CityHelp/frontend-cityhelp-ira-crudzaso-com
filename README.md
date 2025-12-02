@@ -324,5 +324,5 @@ Theme colors are defined using HSL values in CSS variables:
 
 [⬆ Back to Top](#cityhelp---smart-road-safety-platform)
 
+</div>
 
-</div># frontend-cityhelp-ira-crudzaso-com
