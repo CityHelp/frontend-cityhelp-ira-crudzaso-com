@@ -129,7 +129,7 @@ npm run dev
 
 The application will be available at:
 
-👉 **http://localhost:3000**
+👉 https://cityhelp.ira.crudzaso.com/
 
 ### Build
 
@@ -323,5 +323,6 @@ Theme colors are defined using HSL values in CSS variables:
 [⬆ Back to Top](#cityhelp---smart-road-safety-platform)
 
 </div>
+
 
 
