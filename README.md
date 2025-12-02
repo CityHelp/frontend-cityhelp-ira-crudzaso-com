@@ -1,4 +1,4 @@
-# CityHelp - Smart Road Safety Platform
+# CityHelp 
 
 <div align="center">
 
@@ -320,7 +320,7 @@ Theme colors are defined using HSL values in CSS variables:
 
 **Made with ❤️ for a safer Medellín**
 
-[⬆ Back to Top](#cityhelp---smart-road-safety-platform)
+[⬆ Back to Top](#cityhelp)
 
 </div>
 

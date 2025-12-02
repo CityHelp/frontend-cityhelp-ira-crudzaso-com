@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "CityHelp - Smart Road Safety for Medellín",
+  title: "CityHelp",
   description:
     "Report potholes, dangerous curves and road hazards in real time. Citizen platform with AI to improve road safety in Medellín.",
   generator: "v0.app",
