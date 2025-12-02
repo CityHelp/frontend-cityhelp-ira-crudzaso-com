@@ -10,8 +10,6 @@
 
 **A modern, AI-powered citizen platform for reporting and tracking road hazards in Medellín, Colombia.**
 
-[Live Demo](#) · [Report Bug](#) · [Request Feature](#)
-
 </div>
 
 ---
@@ -325,4 +323,5 @@ Theme colors are defined using HSL values in CSS variables:
 [⬆ Back to Top](#cityhelp---smart-road-safety-platform)
 
 </div>
+
 
