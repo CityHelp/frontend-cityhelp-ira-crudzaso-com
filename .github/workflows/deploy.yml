@@ -1,0 +1,31 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches:
+      - main  # only execute while  main space
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar el repo
+        uses: actions/checkout@v3
+
+      - name: Conectar por SSH y desplegar
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: 188.245.114.222     
+          username: deployuser
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22                    # SSH PORT
+          script: |
+            echo "Deploy initialized in the server..."
+            cd /var/www/cityhelpFront/frontend-cityhelp-ira-crudzaso-com
+            git fetch --all
+            git reset --hard origin/main
+            npm install
+            npm run build
+            pm2 restart cityhelpFront
+            echo "Deploy finalized."
