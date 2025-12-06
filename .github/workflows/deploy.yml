@@ -1,31 +1,54 @@
-name: Deploy Frontend
+name: Deploy Next.js App
 
 on:
   push:
-    branches:
-      - main  # only execute while  main space
+    branches: [ "main" ]   # deploy when send to the main branch
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # version of the OS version
 
     steps:
-      - name: Clonar el repo
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Conectar por SSH y desplegar
-        uses: appleboy/ssh-action@v0.1.8
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
         with:
-          host: 188.245.114.222     
-          username: deployuser
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22                    # SSH PORT
-          script: |
-            echo "Deploy initialized in the server..."
-            cd /var/www/cityhelpFront/frontend-cityhelp-ira-crudzaso-com
-            git fetch --all
-            git reset --hard origin/main
-            npm install
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Upload project via rsync
+        run: |
+          rsync -avz --delete \
+            --exclude ".git" \
+            --exclude "node_modules" \
+            ./ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}
+
+      - name: Build & Restart App with PM2
+        run: |
+          ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
+            cd $DEPLOY_PATH
+
+            # install dependencies without question
+            npm ci
+
+            # build of prodeuction
             npm run build
-            pm2 restart cityhelpFront
-            echo "Deploy finalized."
+
+            # start or restart server
+            pm2 describe next-app > /dev/null
+            if [ $? -eq 0 ]; then
+              pm2 restart next-app
+            else
+              pm2 start npm --name "next-app" -- start
+            fi
+
+            pm2 save
+          EOF
+        env:
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
