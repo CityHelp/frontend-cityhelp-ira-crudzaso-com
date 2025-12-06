@@ -50,7 +50,7 @@
 - 📊 Provide data-driven insights through interactive metrics
 - 🤝 Foster community collaboration for urban safety
 - 🎯 Utilize AI for intelligent hazard detection and prioritization
-- 📱 Deliver a responsive, accessible user experience
+- 📱 Deliver a responsive, accessible user experience --
 
 ---
 
@@ -323,6 +323,7 @@ Theme colors are defined using HSL values in CSS variables:
 [⬆ Back to Top](#cityhelp)
 
 </div>
+
 
 
 
