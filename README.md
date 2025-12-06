@@ -102,7 +102,7 @@ Ensure you have the following installed on your system:
 
 ```bash
 git clone https://github.com/CityHelp/frontend-cityhelp-ira-crudzaso-com.git
-cd landing-page
+cd frontend-cityhelp-ira-crudzaso-com
 ```
 
 2. **Clean npm cache (if needed)**
