@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // <--- ESTO ES LO MÁS IMPORTANTE
+  output: 'standalone',
   images: {
-    unoptimized: true, // <--- Agrega esto para evitar errores con imágenes
+    unoptimized: true,
   },
 };
 
-module.exports = nextConfig; // O "export default nextConfig" si usas .mjs
+export default nextConfig;

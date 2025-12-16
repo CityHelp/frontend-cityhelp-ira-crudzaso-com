@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    container_name: cityhelp-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    # Si necesitas variables de entorno adicionales, puedes descomentar y añadir aquí o usar un archivo .env
+    # env_file:
+    #   - .env
