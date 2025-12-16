@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'export',  // <--- ESTO ES LO MÁS IMPORTANTE
   images: {
-    unoptimized: true,
+    unoptimized: true, // <--- Agrega esto para evitar errores con imágenes
   },
-}
+};
 
-export default nextConfig
+module.exports = nextConfig; // O "export default nextConfig" si usas .mjs
