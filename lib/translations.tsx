@@ -126,7 +126,7 @@ const enTranslations: Translations = {
     { name: "The Challenge", href: "#el-desafio" },
     { name: "Contact", href: "#contacto" },
   ],
-  downloadApp: "Watch App",
+  downloadApp: "Go to the app",
   platformName: "CityHelp",
 
   heroTitle: "CityHelp",
@@ -160,7 +160,7 @@ const enTranslations: Translations = {
       description: "Help create safer routes for the entire community.",
     },
   ],
-  downloadApplication: "Download Application",
+  downloadApplication: "Go to the app",
 
   metricsTitle: "Metrics",
   metricsSubtitle: "Community impact",

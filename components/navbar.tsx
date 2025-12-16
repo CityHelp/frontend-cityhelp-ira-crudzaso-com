@@ -83,12 +83,11 @@ export function Navbar() {
             </Button>
 
             <a
-              href="https://play.google.com/store/apps"
+              href="https://cityhelp.crudzaso.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 h-10 btn-ripple transition-all duration-300"
             >
-              <Download className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
               {t.downloadApp}
             </a>
 
@@ -123,14 +122,13 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="https://play.google.com/store/apps"
+                href="https://cityhelp.crudzaso.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full mt-2 h-10 btn-ripple animate-slide-up transition-all duration-300"
                 style={{ animationDelay: "0.25s" }}
               >
-                <Download className="w-4 h-4" />
-                {t.downloadApp}
+              
               </a>
             </div>
           </div>
